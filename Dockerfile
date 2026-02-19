@@ -9,7 +9,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 go build -o /usr/local/bin/zrok2 ./cmd/zrok2/
+RUN CGO_ENABLED=0 go build -tags no_zrok_ui -o /usr/local/bin/zrok2 ./cmd/zrok2/
 
 # Stage 2: Runtime image
 FROM docker.io/openziti/ziti-cli:latest
