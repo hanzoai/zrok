@@ -1,15 +1,34 @@
 # Multi-stage build for ghcr.io/hanzoai/zrok
-# Stage 1: Build zrok2 binary from source
-FROM golang:1.25-alpine AS builder
+# Stage 1: Build Node UI
+FROM node:22-alpine AS ui-builder
 
-RUN apk add --no-cache git gcc musl-dev
+WORKDIR /src
+
+# Build main console UI
+COPY ui/package*.json ui/
+RUN cd ui && npm ci
+COPY ui/ ui/
+RUN cd ui && npm run build
+
+# Build agent UI
+COPY agent/agentUi/package*.json agent/agentUi/
+RUN cd agent/agentUi && npm ci
+COPY agent/agentUi/ agent/agentUi/
+RUN cd agent/agentUi && npm run build
+
+# Stage 2: Build zrok2 binary from source (Debian for CGO/sqlite3 compat)
+FROM golang:1.25-bookworm AS builder
+
+RUN apt-get update && apt-get install -y --no-install-recommends gcc libc6-dev && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 go build -tags no_zrok_ui -o /usr/local/bin/zrok2 ./cmd/zrok2/
+COPY --from=ui-builder /src/ui/dist ui/dist
+COPY --from=ui-builder /src/agent/agentUi/dist agent/agentUi/dist
+RUN CGO_ENABLED=1 go build -tags sqlite_foreign_keys -ldflags '-s -w -extldflags "-static"' -o /usr/local/bin/zrok2 ./cmd/zrok2/
 
 # Stage 2: Runtime image
 FROM docker.io/openziti/ziti-cli:latest
