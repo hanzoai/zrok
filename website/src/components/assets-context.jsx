@@ -10,7 +10,7 @@ export const AssetsProvider = ({ children }) => {
   useEffect(() => {
     const fetchReleaseAssets = async () => {
       try {
-        const response = await fetch('https://api.github.com/repos/openziti/zrok/releases/latest');
+        const response = await fetch('https://api.github.com/repos/hanzoai/zrok/releases/latest');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

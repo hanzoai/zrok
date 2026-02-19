@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: openziti/ziti-mattermost-action-py@v1
       if: |
-        github.repository_owner == 'openziti'
+        github.repository_owner == 'hanzoai'
         && ((github.event_name != 'pull_request_review')
         || (github.event_name == 'pull_request_review' && github.event.review.state == 'approved'))
       with:

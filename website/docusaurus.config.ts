@@ -43,7 +43,7 @@ const config: Config = {
     title: 'zrok',
     staticDirectories: [ZROK_STATIC, ZROK_DOCS_IMAGES, ZROK_DOCKER_COMPOSE, ZROK_ETC],
     tagline: 'Globally distributed reverse proxy',
-    url: 'https://docs.zrok.io',
+    url: 'https://github.com/hanzoai/zrok',
     baseUrl: '/',
     trailingSlash: true,
     onBrokenLinks: 'throw',
@@ -68,7 +68,7 @@ const config: Config = {
     ],
 
     // GitHub pages deployment config.
-    organizationName: 'NetFoundry',
+    organizationName: 'Hanzo',
     projectName: 'zrok',
 
     i18n: {
@@ -149,7 +149,7 @@ const config: Config = {
         netfoundry: {
             showStarBanner: true,
             starBanner: {
-                repoUrl: 'https://github.com/openziti/zrok',
+                repoUrl: 'https://github.com/hanzoai/zrok',
                 label: 'Star zrok on GitHub',
             },
             footer: zrokFooter,
@@ -159,7 +159,7 @@ const config: Config = {
             logo: {
                 alt: 'zrok Logo',
                 src: 'img/zrok-1.0.0-rocket-green.svg',
-                href: 'https://zrok.io',
+                href: 'https://github.com/hanzoai/zrok',
                 target: '_self',
             },
             items: [
@@ -168,28 +168,28 @@ const config: Config = {
                     docsPluginId: 'zrok',
                 },
                 {
-                    href: 'https://zrok.io/pricing/',
+                    href: 'https://github.com/hanzoai/zrok',
                     position: 'right',
                     label: 'pricing',
                 },
                 {
-                    href: 'https://myzrok.io/',
+                    href: 'https://github.com/hanzoai/zrok',
                     position: 'right',
                     label: 'account',
                 },
                 {
-                    href: 'https://github.com/orgs/openziti/projects/16',
+                    href: 'https://github.com/orgs/hanzoai/projects',
                     label: 'roadmap',
                     position: 'right',
                 },
                 {
-                    href: 'https://github.com/openziti/zrok',
+                    href: 'https://github.com/hanzoai/zrok',
                     position: 'right',
                     className: 'header-github-link',
                     title: 'GitHub'
                 },
                 {
-                    href: 'https://openziti.discourse.group/',
+                    href: 'https://github.com/hanzoai/zrok/discussions',
                     position: 'right',
                     className: 'header-discourse-link',
                     title: 'Discourse'
@@ -199,7 +199,7 @@ const config: Config = {
         footer: {
             style: 'dark',
             links: [],
-            copyright: `Copyright © ${new Date().getFullYear()} <a href="https://netfoundry.io">NetFoundry Inc.</a>`,
+            copyright: `Copyright © ${new Date().getFullYear()} <a href="https://hanzo.ai">Hanzo AI Inc.</a>`,
         },
         prism: {
             theme: lightCodeTheme,

@@ -1,5 +1,5 @@
 {
-  "name": "@openziti/zrok",
+  "name": "@hanzoai/zrok",
   "version": "1.0.0",
   "description": "SDK to allow interaction with the zrok service from Node.js applications",
   "main": "dist/index.js",
@@ -21,16 +21,16 @@
     "reverse-proxy",
     "zero-trust"
   ],
-  "author": "NetFoundry",
+  "author": "Hanzo",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openziti/zrok"
+    "url": "https://github.com/hanzoai/zrok"
   },
   "bugs": {
-    "url": "https://github.com/openziti/zrok/issues"
+    "url": "https://github.com/hanzoai/zrok/issues"
   },
-  "homepage": "https://github.com/openziti/zrok#readme",
+  "homepage": "https://github.com/hanzoai/zrok#readme",
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.5",

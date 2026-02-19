@@ -18,9 +18,9 @@ builds:
 nfpms:
   - package_name: zrok2
     id: zrok-cli
-    vendor: NetFoundry
-    homepage: https://zrok.io/
-    maintainer: support@zrok.io
+    vendor: Hanzo
+    homepage: https://github.com/hanzoai/zrok
+    maintainer: support@hanzo.ai
     description: |-
       zrok is a next-generation sharing platform, designed to make sharing network and file resources simple and
       secure.
@@ -58,9 +58,9 @@ nfpms:
 
   - package_name: zrok2-agent
     id: zrok-agent
-    vendor: NetFoundry
-    homepage: https://zrok.io/
-    maintainer: support@zrok.io
+    vendor: Hanzo
+    homepage: https://github.com/hanzoai/zrok
+    maintainer: support@hanzo.ai
     description: |
       This package provides zrok2-agent.service. Enable your zrok account on this device with "zrok2 enable". Run
       "systemctl enable --user --now zrok2-agent.service" to enable the service for the current user and visit the agent

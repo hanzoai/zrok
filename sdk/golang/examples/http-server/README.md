@@ -11,7 +11,7 @@ This `http-server` example is a minimal `zrok` application that surfaces a basic
 	}
 ```
 
-The `root` is a structure that contains all of the user's environment detail and allows the SDK application to access the `zrok` service instance and the underlying OpenZiti network.
+The `root` is a structure that contains all of the user's environment detail and allows the SDK application to access the `zrok` service instance and the underlying Hanzo ZT network.
 
 ```go
     shr, err := sdk.CreateShare(root, &sdk.ShareRequest{

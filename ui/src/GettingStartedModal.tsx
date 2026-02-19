@@ -59,7 +59,7 @@ const GettingStartedModal = ({ close, isOpen }: GettingStartedModalProps) => {
                 </Grid2>
                 <Grid2 container sx={{ flexGrow: 1, p: 1 }} alignItems="center">
                     <Typography>
-                        <a href="https://docs.zrok.io/docs/getting-started#installing-the-zrok-command" target="_">https://docs.zrok.io/docs/getting-started#installing-the-zrok-command</a>
+                        <a href="https://github.com/hanzoai/zrok#quick-start" target="_">https://github.com/hanzoai/zrok#quick-start</a>
                     </Typography>
                 </Grid2>
                 <Grid2 container sx={{ flexGrow: 1, p: 1 }} alignItems="center">
@@ -109,8 +109,8 @@ const GettingStartedModal = ({ close, isOpen }: GettingStartedModalProps) => {
                 </Grid2>
                 <Grid2 container sx={{ flexGrow: 1, p: 1 }} alignItems="center">
                     <Typography>
-                        Visit the <a href="https://docs.zrok.io/docs/getting-started" target="_">Getting Started Guide</a>
-                        <span> </span>and the <a href="https://docs.zrok.io" target="_">zrok Documentation</a> for more help.
+                        Visit the <a href="https://github.com/hanzoai/zrok#quick-start" target="_">Getting Started Guide</a>
+                        <span> </span>and the <a href="https://github.com/hanzoai/zrok" target="_">zrok Documentation</a> for more help.
                     </Typography>
                 </Grid2>
             </Box>

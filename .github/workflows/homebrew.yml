@@ -26,7 +26,7 @@ jobs:
 
   brew_formula:
     needs: enforce_stable_semver
-    if: (github.repository_owner == 'openziti' || github.repository_owner == 'openziti-test-kitchen') && vars.ZROK_SKIP_HOMEBREW != 'true'
+    if: (github.repository_owner == 'hanzoai') && vars.ZROK_SKIP_HOMEBREW != 'true'
     runs-on: ubuntu-24.04
     steps:
 

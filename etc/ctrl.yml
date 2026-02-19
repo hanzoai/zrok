@@ -33,9 +33,9 @@ admin:
   #
   #profile_endpoint:               localhost:6060
 
-# The `bridge` section configures the `zrok controller metrics bridge`, specifying the source and sink where OpenZiti
+# The `bridge` section configures the `zrok controller metrics bridge`, specifying the source and sink where Hanzo ZT
 # `fabric.usage` events are consumed and then sent into `zrok`. For production environments, we recommend that you use
-# the `fileSource`, tailing the events from a JSON file written to by the OpenZiti controller. The `amqpSink` will then
+# the `fileSource`, tailing the events from a JSON file written to by the Hanzo ZT controller. The `amqpSink` will then
 # forward the events to an AMQP queue for consumption by multiple `zrok` controllers.
 #
 bridge:
@@ -74,7 +74,7 @@ email:
   port:                           587  # this must be a STARTTLS port, not the TLS port (465)
   username:                       ""
   password:                       ""
-  from:                           ziggy@zrok.io
+  from:                           noreply@hanzo.ai
 
 # Invites
 #
@@ -91,7 +91,7 @@ invites:
   # Setting `token_contact` to something other than an empty string will show the contact information in the
   # `zrok invite` command.
   #
-  token_contact:                  invite@zrok.io
+  token_contact:                  support@hanzo.ai
 
 # Service instance limits global configuration.
 #
@@ -133,7 +133,7 @@ maintenance:
 #
 metrics:
   agent:
-    # The `source` controls where the `zrok controller` looks to consume OpenZiti `fabric.usage` events. This works in
+    # The `source` controls where the `zrok controller` looks to consume Hanzo ZT `fabric.usage` events. This works in
     # concert with the `bridge` section above to consume events from an AMQP queue. This can also be configured to work
     # with a `fileSource` (see the `bridge` section above for details), and also with a `websocketSource`.
     #

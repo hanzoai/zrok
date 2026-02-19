@@ -12,7 +12,7 @@ builds:
       - amd64
     hooks:
       post:
-        - cmd: 'codesign -s "Developer ID Application: NetFoundry Inc" -v dist/zrok-amd64_darwin_amd64_v1/zrok2 --options=runtime'
+        - cmd: 'codesign -s "Developer ID Application: Hanzo AI Inc" -v dist/zrok-amd64_darwin_amd64_v1/zrok2 --options=runtime'
           output: true
         - cmd: zip "dist/zrok-amd64_darwin_amd64_v1/zrok2.zip" dist/zrok-amd64_darwin_amd64_v1/zrok2
         - cmd: xcrun notarytool submit "dist/zrok-amd64_darwin_amd64_v1/zrok2.zip" --apple-id {{ .Env.AC_USERNAME }} --password {{ .Env.AC_PASSWORD }} --team-id MN5S649TXM --wait
@@ -30,7 +30,7 @@ builds:
       - arm64
     hooks:
       post:
-        - cmd: 'codesign -s "Developer ID Application: NetFoundry Inc" -v dist/zrok-arm64_darwin_arm64_v8.0/zrok2 --options=runtime'
+        - cmd: 'codesign -s "Developer ID Application: Hanzo AI Inc" -v dist/zrok-arm64_darwin_arm64_v8.0/zrok2 --options=runtime'
           output: true
         - cmd: zip "dist/zrok-arm64_darwin_arm64_v8.0/zrok2.zip" dist/zrok-arm64_darwin_arm64_v8.0/zrok2
         - cmd: xcrun notarytool submit "dist/zrok-arm64_darwin_arm64_v8.0/zrok2.zip" --apple-id {{ .Env.AC_USERNAME }} --password {{ .Env.AC_PASSWORD }} --team-id MN5S649TXM --wait

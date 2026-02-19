@@ -1,12 +1,12 @@
-# OpenZiti Pub/Sub Package
+# Hanzo ZT Pub/Sub Package
 
-A simple, reliable pub/sub implementation built on OpenZiti with mesh networking support.
+A simple, reliable pub/sub implementation built on Hanzo ZT with mesh networking support.
 
 ## Features
 
-- **OpenZiti Native**: Uses OpenZiti services for secure, overlay network communication
+- **Hanzo ZT Native**: Uses Hanzo ZT services for secure, overlay network communication
 - **Mesh Architecture**: Multiple publishers form a self-organizing mesh for fault tolerance
-- **Addressable Terminators**: Uses OpenZiti addressable terminators for peer discovery
+- **Addressable Terminators**: Uses Hanzo ZT addressable terminators for peer discovery
 - **Auto-Reconnect**: Automatic reconnection with configurable delays and retry limits
 - **Topic Filtering**: Subscribe to specific topics or all messages
 - **Message Deduplication**: Prevents message loops in mesh networks

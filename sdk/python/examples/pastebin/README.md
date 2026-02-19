@@ -4,7 +4,7 @@ This example shows the use of the zrok SDK spinning up a simple pastebin command
 
 ## Self-hosting Setup :wrench:
 
-You don't need this section if you're using hosted zrok from NetFoundry (https://api-v2.zrok.io/).
+You don't need this section if you're using a hosted zrok service.
 
 Refer to the [setup guide](../../../docs/guides/self-hosting/self_hosting_guide.md) for details on setting up your zrok
 environment if you're self-hosting zrok.

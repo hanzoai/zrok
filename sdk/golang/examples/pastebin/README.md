@@ -38,7 +38,7 @@ All SDK applications need to load the user's "root" from the `environment` packa
 	}
 ```
 
-The `root` is a structure that contains all of the user's environment detail and allows the SDK application to access the `zrok` service instance and the underlying OpenZiti network.
+The `root` is a structure that contains all of the user's environment detail and allows the SDK application to access the `zrok` service instance and the underlying Hanzo ZT network.
 
 Next, `copyto` will create a `zrok` share:
 

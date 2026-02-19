@@ -1,9 +1,8 @@
 # Contributing
 
-NetFoundry welcomes all and any contributions. All open source projects managed by NetFoundry share a common
-[guide for contributions](https://netfoundry.io/docs/openziti/policies/CONTRIBUTING/).
+Hanzo welcomes all and any contributions.
 
-If you are eager to contribute to a NetFoundry-managed open source project please read and act accordingly.
+If you are eager to contribute please read and act accordingly.
 
 ## Project Styles
 
@@ -51,5 +50,5 @@ conventions and idioms. The log formatting examples for Go are applicable to all
 
 ### Docusaurus
 
-+ This project uses [Docusaurus](https://docusaurus.io/) with NodeJS 18 to build static content for docs.zrok.io.
++ This project uses [Docusaurus](https://docusaurus.io/) with NodeJS 18 to build static content for documentation.
 + Use `npm` to manage Node modules, not `yarn` (Ken plans to switch from `npm` to `yarn` if no one else does).

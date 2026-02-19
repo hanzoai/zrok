@@ -92,7 +92,7 @@ jobs:
       run: |
         cd sdk/nodejs/sdk
         # Check if this is the official repository
-        if [[ "${{ github.repository_owner }}" == "openziti" ]]; then
+        if [[ "${{ github.repository_owner }}" == "hanzoai" ]]; then
           echo "Publishing from official repository with @latest tag"
           npm publish --access public
         else

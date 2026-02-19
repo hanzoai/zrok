@@ -30,7 +30,7 @@ Review the `apiEndpoint` configuration, if you are running version `1.0` or late
 zrok2 status
 ```
 
-If you're still having issues, we recommend you reach out to our community support team at our [zrok discourse](https://openziti.discourse.group/c/zrok/24) forum.
+If you're still having issues, we recommend you reach out to our community support team at our [GitHub Discussions](https://github.com/hanzoai/zrok/discussions) page.
 
 If you prefer to do a hard reset of your environment, you can also run the commands below:
 

@@ -2,7 +2,7 @@
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/70zJ_h4uiD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This Docker Compose project creates a zrok instance supported by a OpenZiti controller and router. It supports flexible deployment configurations:
+This Docker Compose project creates a zrok instance supported by a Hanzo ZT controller and router. It supports flexible deployment configurations:
 
 1. **Basic Configuration**: Services exposed on localhost only (no TLS)
 2. **With Caddy**: Services published using Caddy (TLS)
@@ -17,13 +17,13 @@ Create a working directory on your Docker host and save these Docker Compose pro
 1. Run this script to download the files in the current directory.
 
     ```bash
-    curl https://get.openziti.io/zrok-instance/fetch.bash | bash
+    curl https://raw.githubusercontent.com/hanzoai/zrok/main/docker/compose/zrok-instance/fetch.bash | bash
     ```
 
     Or, specify the Compose project directory.
-    
+
     ```bash
-    curl https://get.openziti.io/zrok-instance/fetch.bash | bash -s /path/to/compose/project/dir
+    curl https://raw.githubusercontent.com/hanzoai/zrok/main/docker/compose/zrok-instance/fetch.bash | bash -s /path/to/compose/project/dir
     ```
 
 #### I'll Do it Myself
@@ -31,7 +31,7 @@ Create a working directory on your Docker host and save these Docker Compose pro
 1. Get the zrok repo ZIP file.
 
     ```bash
-    wget https://github.com/openziti/zrok/archive/refs/heads/main.zip
+    wget https://github.com/hanzoai/zrok/archive/refs/heads/main.zip
     ```
 
 1. Unzip the zrok-instance files into the project directory.
@@ -173,7 +173,7 @@ docker compose exec zrok-controller zrok admin create account <email> <password>
 
 You must enable each device environment with the account token obtained when the account was created. This is separate from the account password that's used to log in to the web console.
 
-Follow [the getting started guide](https://docs.zrok.io/docs/getting-started#installing-the-zrok-command) to install the zrok CLI on some device and enable a zrok environment.
+Follow the getting started guide to install the zrok CLI on some device and enable a zrok environment.
 
 1. Configure the environment with the zrok API endpoint:
 

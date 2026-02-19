@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   build:
-    if: github.repository_owner == 'openziti'
+    if: github.repository_owner == 'hanzoai'
     runs-on: ubuntu-latest
     
     steps:

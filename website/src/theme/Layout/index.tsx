@@ -3,7 +3,7 @@ import { NetFoundryLayout } from '@netfoundry/docusaurus-theme/ui';
 import { zrokFooter } from '../../components/footer';
 
 const starProps = {
-    repoUrl: 'https://github.com/openziti/zrok',
+    repoUrl: 'https://github.com/hanzoai/zrok',
     label: 'Star zrok on GitHub',
 };
 

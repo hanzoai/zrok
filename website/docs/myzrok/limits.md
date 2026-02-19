@@ -2,13 +2,13 @@
 title: Limits
 ---
 
-NetFoundry's public zrok instance implements various limits based on pricing tier,
+The public zrok instance implements various limits based on pricing tier,
 as well as rate limits in order to protect the service for all users.
 
 ### Limits on Shares, Environments, or Bandwidth
 
 The number of shares, enviroments, or allowed bandwidth is based on the limits outlined within your myzrok subscription.
-These limits are defined on the [zrok pricing](https://zrok.io/pricing/) page.
+These limits are defined on the zrok pricing page.
 Bandwidth limitations are based on a rolling 24 hour window. Note that if you exceed the daily bandwidth of your plan,
 any running shares will be disabled, and the zrok API will prevent any new shares from being created until the bandwidth
 falls back below the 24 hour limit.

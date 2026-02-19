@@ -6,8 +6,8 @@ on:
       - 'v*.*.*'
 
 env:
-  ZITI_DEB_TEST_REPO: ${{ vars.ZITI_DEB_TEST_REPO || 'zitipax-openziti-deb-test' }}
-  ZITI_RPM_TEST_REPO: ${{ vars.ZITI_RPM_TEST_REPO || 'zitipax-openziti-rpm-test' }}
+  ZITI_DEB_TEST_REPO: ${{ vars.ZITI_DEB_TEST_REPO || 'zitipax-hanzoai-deb-test' }}
+  ZITI_RPM_TEST_REPO: ${{ vars.ZITI_RPM_TEST_REPO || 'zitipax-hanzoai-rpm-test' }}
   JFROG_CLI_VERSION: ${{ vars.JFROG_CLI_VERSION || '2.50.4' }}
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - build-darwin
       - build-windows
     runs-on: ubuntu-22.04  # oldest Docker host runner for broadest kernel, syscall, ABI support
-    container: openziti/ziti-builder:v2  # v2 is based on ubuntu focal 20.04 for broadest glibc support
+    container: hanzoai/zt-builder:v2  # v2 is based on ubuntu focal 20.04 for broadest glibc support
     strategy:
       matrix:
         arch:
@@ -159,7 +159,7 @@ jobs:
           done
 
   build-darwin:
-    if: github.repository_owner == 'openziti' || vars.ZROK_SKIP_MACOS_BUILD == 'false'
+    if: github.repository_owner == 'hanzoai' || vars.ZROK_SKIP_MACOS_BUILD == 'false'
     runs-on: macos-14
     steps:
       - name: import distribution cert
@@ -215,7 +215,7 @@ jobs:
           path: ./dist/*.gz
 
   build-windows:
-    if: github.repository_owner == 'openziti' || vars.ZROK_SKIP_WINDOWS_BUILD == 'false'
+    if: github.repository_owner == 'hanzoai' || vars.ZROK_SKIP_WINDOWS_BUILD == 'false'
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt update

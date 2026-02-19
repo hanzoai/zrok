@@ -1,6 +1,6 @@
 
 ARG ZROK_CLI_TAG=latest
-ARG ZROK_CLI_IMAGE=openziti/zrok
+ARG ZROK_CLI_IMAGE=hanzoai/zrok
 FROM ${ZROK_CLI_IMAGE}:${ZROK_CLI_TAG}
 
 # set up image as root

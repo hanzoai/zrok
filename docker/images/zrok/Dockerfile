@@ -1,5 +1,5 @@
-# this builds docker.io/openziti/zrok2
-FROM docker.io/openziti/ziti-cli:1.6.12
+# this builds docker.io/hanzoai/zrok2
+FROM docker.io/hanzoai/zt-cli:1.6.12
 
 ARG ARTIFACTS_DIR=./dist
 ARG DOCKER_BUILD_DIR=.
@@ -9,13 +9,13 @@ ARG TARGETOS
 ARG TARGETARCH
 
 ### Required OpenShift Labels
-LABEL name="openziti/zrok2" \
-      maintainer="support@zrok.io" \
-      vendor="NetFoundry" \
+LABEL name="hanzoai/zrok2" \
+      maintainer="support@hanzo.ai" \
+      vendor="Hanzo" \
       summary="Run the zrok2 CLI" \
       description="Run the zrok2 CLI" \
       org.opencontainers.image.description="Run the zrok2 CLI" \
-      org.opencontainers.image.source="https://github.com/openziti/zrok"
+      org.opencontainers.image.source="https://github.com/hanzoai/zrok"
 
 USER root
 
