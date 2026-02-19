@@ -15,8 +15,8 @@ http:// {
     # Handle paths starting with `/zrok/*`
     # This will also strip the `/zrok/` from the path before sending to the backend
     handle_path /zrok/* {
-        reverse_proxy https://zrok.io {
-            header_up Host zrok.io
+        reverse_proxy https://example.com {
+            header_up Host example.com
         }
     }
 

@@ -96,7 +96,7 @@ func (cmd *inviteCommand) endpointError(apiEndpoint, _ string) {
 	fmt.Printf("you are trying to use the zrok service at: %v\n\n", tui.Code.Render(apiEndpoint))
 	fmt.Printf("you can change your zrok service endpoint using this command:\n\n")
 	fmt.Printf("%v\n\n", tui.Code.Render("$ zrok2 config set apiEndpoint <newEndpoint>"))
-	fmt.Printf("(where newEndpoint is something like: %v)\n\n", tui.Code.Render("https://some.zrok.io"))
+	fmt.Printf("(where newEndpoint is something like: %v)\n\n", tui.Code.Render("https://your-zrok-instance.example.com"))
 }
 
 type inviteTui struct {

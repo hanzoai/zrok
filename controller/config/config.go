@@ -128,7 +128,7 @@ func LoadConfig(path string) (*Config, error) {
 		return nil, errors.Wrapf(err, "error loading controller config '%v'", path)
 	}
 	if !envVersionOk() && cfg.V != ConfigVersion {
-		return nil, errors.Errorf("expecting configuration version '%v', your configuration is version '%v'; please see zrok.io for changelog and configuration documentation", ConfigVersion, cfg.V)
+		return nil, errors.Errorf("expecting configuration version '%v', your configuration is version '%v'; please see github.com/hanzoai/zrok for changelog and configuration documentation", ConfigVersion, cfg.V)
 	}
 	if err := cfg.compileCompatibilityPatterns(); err != nil {
 		return nil, errors.Wrap(err, "error compiling compatibility patterns")

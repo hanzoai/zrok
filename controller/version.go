@@ -14,7 +14,7 @@ import (
 
 func versionHandler(_ metadata.VersionParams) middleware.Responder {
 	outOfDate := "your local zrok installation is out of date and needs to be upgraded! " +
-		"please visit 'https://docs.zrok.io/docs/guides/install/' for the latest release!"
+		"please visit 'https://github.com/hanzoai/zrok/releases' for the latest release!"
 	return metadata.NewVersionOK().WithPayload(rest_model_zrok.Version(outOfDate))
 }
 
@@ -39,7 +39,7 @@ func (h *clientVersionCheckHandler) Handle(params metadata.ClientVersionCheckPar
 		}
 	}
 
-	return metadata.NewClientVersionCheckBadRequest().WithPayload(fmt.Sprintf("client version '%v' does not match any accepted patterns; please visit 'https://docs.zrok.io/docs/guides/install/' for the latest release!", params.Body.ClientVersion))
+	return metadata.NewClientVersionCheckBadRequest().WithPayload(fmt.Sprintf("client version '%v' does not match any accepted patterns; please visit 'https://github.com/hanzoai/zrok/releases' for the latest release!", params.Body.ClientVersion))
 }
 
 func (h *clientVersionCheckHandler) getCompiledPatterns() []*regexp.Regexp {

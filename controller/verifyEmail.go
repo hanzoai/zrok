@@ -47,7 +47,7 @@ func sendVerificationEmail(emailAddress, regToken string) error {
 	msg.SetImportance(mail.ImportanceHigh)
 	msg.SetBodyString(mail.TypeTextPlain, plainBody)
 	msg.SetBodyString(mail.TypeTextHTML, htmlBody)
-	msg.SetHeader("List-Unsubscribe", "<mailto: invite@zrok.io?subject=unsubscribe>")
+	msg.SetHeader("List-Unsubscribe", "<mailto: zt@hanzo.ai?subject=unsubscribe>")
 
 	client, err := mail.NewClient(cfg.Email.Host,
 		mail.WithPort(cfg.Email.Port),
